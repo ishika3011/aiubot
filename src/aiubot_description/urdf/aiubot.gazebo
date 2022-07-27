@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<robot name="aiubot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="laser_color" value="Gazebo/Red " />
+<xacro:property name="tyre_color" value="Gazebo/Black" />
+<xacro:property name="camera_color" value="Gazebo/BlueLaser" />
+<xacro:property name="body_color" value="Gazebo/Silver" />
+
+<gazebo>
+  <plugin filename="libgazebo_ros_control.so" name="control"/>
+</gazebo>
+<gazebo reference="base_link">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+  <gravity>true</gravity>
+</gazebo>
+
+<gazebo reference="sensorody_1">
+  <material>${laser_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="wheelR_1">
+  <material>${tyre_color}</material>
+  <mu1>0.4</mu1>
+  <mu2>0.4</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="wheelL_1">
+  <material>${tyre_color}</material>
+  <mu1>0.4</mu1>
+  <mu2>0.4</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="castorfront_1">
+  <material>${tyre_color}</material>
+  <mu1>0.01</mu1>
+  <mu2>0.01</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="castorback_1">
+  <material>${tyre_color}</material>
+  <mu1>0.01</mu1>
+  <mu2>0.01</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="camera_1">
+  <material>${camera_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+</robot>

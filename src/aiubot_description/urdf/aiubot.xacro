@@ -1,0 +1,194 @@
+<?xml version="1.0" ?>
+<robot name="aiubot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find aiubot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find aiubot_description)/urdf/aiubot.trans" />
+<xacro:include filename="$(find aiubot_description)/urdf/aiubot.gazebo" />
+<xacro:include filename="$(find aiubot_description)/urdf/aiubot_plugin.gazebo" />
+
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.014391584188784936 -0.04150327316862705 0.16552098982328686"/>
+    <mass value="23.422030973070978"/>
+    <inertia ixx="0.176995" ixy="-7.8e-05" ixz="-0.002127" iyy="0.168725" iyz="-0.000284" izz="0.072261"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://aiubot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://aiubot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="sensorody_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.986566313342709e-05 2.537664781157578e-07 0.008339826765682193"/>
+    <mass value="0.06647327422071277"/>
+    <inertia ixx="4e-06" ixy="-0.0" ixz="0.0" iyy="4e-06" iyz="0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.119977 0.0421 -0.090113"/>
+    <geometry>
+      <mesh filename="package://aiubot_description/meshes/sensorody_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.119977 0.0421 -0.090113"/>
+    <geometry>
+      <mesh filename="package://aiubot_description/meshes/sensorody_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheelR_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="6.197462141116494e-07 0.01020025376647607 -8.06639484915439e-07"/>
+    <mass value="0.5823577957861027"/>
+    <inertia ixx="0.000194" ixy="0.0" ixz="-0.0" iyy="0.000349" iyz="0.0" izz="0.000194"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.021363 -0.06734 -0.034657"/>
+    <geometry>
+      <mesh filename="package://aiubot_description/meshes/wheelR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.021363 -0.06734 -0.034657"/>
+    <geometry>
+      <mesh filename="package://aiubot_description/meshes/wheelR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheelL_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="6.197462133691878e-07 -0.009699746233523016 -8.066394823758039e-07"/>
+    <mass value="0.5823577957861046"/>
+    <inertia ixx="0.000194" ixy="0.0" ixz="-0.0" iyy="0.000349" iyz="0.0" izz="0.000194"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.021363 0.15154 -0.034657"/>
+    <geometry>
+      <mesh filename="package://aiubot_description/meshes/wheelL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.021363 0.15154 -0.034657"/>
+    <geometry>
+      <mesh filename="package://aiubot_description/meshes/wheelL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castorfront_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.005274163602599996 0.001344753766475984 -0.005837305848817878"/>
+    <mass value="0.022025609734626382"/>
+    <inertia ixx="1e-06" ixy="-0.0" ixz="0.0" iyy="1e-06" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.091107 0.0421 -0.015213"/>
+    <geometry>
+      <mesh filename="package://aiubot_description/meshes/castorfront_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.091107 0.0421 -0.015213"/>
+    <geometry>
+      <mesh filename="package://aiubot_description/meshes/castorfront_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castorback_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.000811380762035907 -1.6046233523497877e-05 -0.0058530160061557295"/>
+    <mass value="0.022025609734626382"/>
+    <inertia ixx="1e-06" ixy="-0.0" ixz="0.0" iyy="1e-06" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.068429 0.0421 -0.01577"/>
+    <geometry>
+      <mesh filename="package://aiubot_description/meshes/castorback_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.068429 0.0421 -0.01577"/>
+    <geometry>
+      <mesh filename="package://aiubot_description/meshes/castorback_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.005043528648229094 -0.0012804265214368532 0.02187126765525438"/>
+    <mass value="0.275791504548195"/>
+    <inertia ixx="0.000343" ixy="0.0" ixz="-0.0" iyy="2.3e-05" iyz="-0.0" izz="0.000323"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.062009 0.041403 -0.276316"/>
+    <geometry>
+      <mesh filename="package://aiubot_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.062009 0.041403 -0.276316"/>
+    <geometry>
+      <mesh filename="package://aiubot_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="sensor" type="fixed">
+  <origin rpy="0 0 0" xyz="0.119977 -0.0421 0.090113"/>
+  <parent link="base_link"/>
+  <child link="sensorody_1"/>
+</joint>
+
+<joint name="rightwheel" type="continuous">
+  <origin rpy="0 0 0" xyz="0.021363 0.06734 0.034657"/>
+  <parent link="base_link"/>
+  <child link="wheelR_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="leftwheel" type="continuous">
+  <origin rpy="0 0 0" xyz="0.021363 -0.15154 0.034657"/>
+  <parent link="base_link"/>
+  <child link="wheelL_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="frontcaster" type="fixed">
+  <origin rpy="0 0 0" xyz="0.091107 -0.0421 0.015213"/>
+  <parent link="base_link"/>
+  <child link="castorfront_1"/>
+</joint>
+
+<joint name="backcaster" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.068429 -0.0421 0.01577"/>
+  <parent link="base_link"/>
+  <child link="castorback_1"/>
+</joint>
+
+<joint name="camera" type="fixed">
+  <origin rpy="0 0 0" xyz="0.062009 -0.041403 0.276316"/>
+  <parent link="base_link"/>
+  <child link="camera_1"/>
+</joint>
+
+</robot>
