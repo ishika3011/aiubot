@@ -1,8 +1,0 @@
-prefix=/home/ishika/catkin_ws/devel
-
-Name: aiubot_gazebo
-Description: Description of aiubot_gazebo
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: gazebo_ros geometry_msgs nav_msgs roscpp rospy sensor_msgs std_msgs tf

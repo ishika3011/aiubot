@@ -1,8 +1,0 @@
-prefix=/home/ishika/catkin_ws/devel
-
-Name: aiubot_navigation
-Description: Description of aiubot_navigation
-Version: 1.2.4
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
