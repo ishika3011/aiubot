@@ -106,6 +106,5 @@ MIT License © 2022 Ishika Saijwal
 ## 👩‍💻 **Author**
 
 **Ishika Saijwal**  
-🔗 GitHub: https://github.com/ishika3011  
-🔗 LinkedIn: https://linkedin.com/in/ishika-saijwal
+🔗 [GitHub](https://github.com/ishika3011) • [LinkedIn](https://linkedin.com/in/ishika-saijwal)
 
